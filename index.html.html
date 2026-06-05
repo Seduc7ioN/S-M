@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>S&M Tesisat | Bursa Doğalgaz, Klima & Kombi Uzmanı</title>
+<meta name="description" content="Bursa'da 10+ yıllık deneyimle doğalgaz tesisat, klima montaj-bakım ve kombi montaj hizmetleri. Lisanslı ustalar, garantili işçilik.">
+<!-- PWA -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0B1628">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="S&M Tesisat">
+<!-- Icons -->
+<link rel="icon" type="image/x-icon" href="icons/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/icon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="icons/icon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="icons/icon-180x180.png">
+<link rel="apple-touch-icon" sizes="152x152" href="icons/icon-152x152.png">
+<link rel="apple-touch-icon" sizes="144x144" href="icons/icon-144x144.png">
+<!-- OG -->
+<meta property="og:title" content="S&M Tesisat | Bursa Doğalgaz, Klima & Kombi">
+<meta property="og:description" content="Bursa'da lisanslı, garantili doğalgaz tesisat, klima montaj ve kombi hizmetleri.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="tr_TR">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --gold: #C9A84C;
+  --gold-light: #E8C96A;
+  --gold-dim: rgba(201,168,76,0.12);
+  --navy: #0B1628;
+  --navy2: #111F35;
+  --navy3: #17293F;
+  --slate: #8FA3B8;
+  --white: #F7F4EE;
+  --line: rgba(201,168,76,0.18);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--navy);color:var(--white);overflow-x:hidden}
+
+/* ── NAVBAR ── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:22px 60px;
+  border-bottom:1px solid var(--line);
+  background:rgba(11,22,40,0.94);
+  backdrop-filter:blur(16px);
+}
+.logo{display:flex;align-items:center;gap:14px}
+.logo-mark{
+  width:42px;height:42px;border:2px solid var(--gold);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:900;
+  color:var(--gold);letter-spacing:1px;
+}
+.logo-text{font-family:'DM Sans',sans-serif;font-size:0.78rem;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--slate)}
+.logo-text strong{display:block;color:var(--white);font-size:0.92rem;letter-spacing:2px}
+.nav-links{display:flex;align-items:center;gap:36px}
+.nav-links a{color:var(--slate);text-decoration:none;font-size:0.85rem;font-weight:500;letter-spacing:0.5px;transition:color 0.2s}
+.nav-links a:hover{color:var(--gold)}
+.nav-cta{
+  border:1px solid var(--gold);color:var(--gold);
+  padding:10px 26px;font-size:0.82rem;font-weight:600;letter-spacing:1.5px;
+  text-transform:uppercase;text-decoration:none;
+  transition:background 0.2s,color 0.2s;
+}
+.nav-cta:hover{background:var(--gold);color:var(--navy)}
+
+/* ── HERO ── */
+.hero{
+  min-height:100vh;display:flex;align-items:center;
+  padding:140px 60px 100px;position:relative;overflow:hidden;
+}
+.hero-bg{
+  position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 55% 70% at 65% 45%, rgba(201,168,76,0.07) 0%, transparent 65%),
+    linear-gradient(160deg, #0B1628 0%, #111F35 60%, #0D1A2C 100%);
+}
+.noise{
+  position:absolute;inset:0;opacity:0.025;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size:200px 200px;
+}
+.hero-line{
+  position:absolute;left:0;top:0;bottom:0;width:1px;
+  background:linear-gradient(to bottom, transparent, var(--gold) 30%, var(--gold) 70%, transparent);
+  opacity:0.2;left:59px;
+}
+.hero-content{position:relative;max-width:680px}
+.eyebrow{
+  display:flex;align-items:center;gap:14px;margin-bottom:36px;
+  opacity:0;animation:rise 0.8s 0.1s forwards;
+}
+.eyebrow-line{width:40px;height:1px;background:var(--gold)}
+.eyebrow span{font-size:0.72rem;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:var(--gold)}
+h1{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(3.2rem,6vw,5.2rem);
+  font-weight:900;line-height:1.06;
+  margin-bottom:28px;
+  opacity:0;animation:rise 0.8s 0.25s forwards;
+}
+h1 em{font-style:normal;color:var(--gold)}
+.hero-sub{
+  font-size:1rem;color:var(--slate);line-height:1.8;
+  max-width:480px;margin-bottom:48px;font-weight:300;
+  opacity:0;animation:rise 0.8s 0.4s forwards;
+}
+.hero-sub strong{color:var(--white);font-weight:500}
+.cta-row{
+  display:flex;align-items:center;gap:20px;
+  opacity:0;animation:rise 0.8s 0.55s forwards;
+}
+.btn-gold{
+  background:var(--gold);color:var(--navy);
+  padding:16px 40px;font-weight:600;font-size:0.88rem;
+  letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;
+  transition:background 0.2s,transform 0.15s;
+  box-shadow:0 4px 28px rgba(201,168,76,0.25);
+}
+.btn-gold:hover{background:var(--gold-light);transform:translateY(-2px)}
+.btn-ghost{
+  color:var(--slate);font-size:0.88rem;font-weight:500;
+  text-decoration:none;letter-spacing:0.5px;
+  display:flex;align-items:center;gap:8px;
+  transition:color 0.2s;
+}
+.btn-ghost:hover{color:var(--white)}
+.btn-ghost::after{content:"→";transition:transform 0.2s}
+.btn-ghost:hover::after{transform:translateX(4px)}
+
+.hero-stats{
+  display:flex;gap:0;margin-top:72px;
+  border:1px solid var(--line);
+  opacity:0;animation:rise 0.8s 0.7s forwards;
+}
+.stat{
+  flex:1;padding:24px 32px;
+  border-right:1px solid var(--line);
+}
+.stat:last-child{border-right:none}
+.stat-n{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:700;color:var(--gold);line-height:1}
+.stat-l{font-size:0.72rem;color:var(--slate);letter-spacing:1.5px;text-transform:uppercase;margin-top:6px;font-weight:500}
+
+/* ── SECTION BASE ── */
+section{padding:110px 60px;background:var(--navy)}
+.tag{font-size:0.7rem;font-weight:600;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.tag::before{content:'';display:inline-block;width:28px;height:1px;background:var(--gold)}
+h2{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3rem);font-weight:900;line-height:1.1;margin-bottom:16px}
+.lead{color:#AABFD4;font-size:1rem;line-height:1.8;max-width:480px;font-weight:400}
+
+/* ── HİZMETLER ── */
+.hizmetler{background:var(--navy2)}
+.hizmetler-inner{max-width:1200px;margin:0 auto}
+.h-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:64px;gap:40px;flex-wrap:wrap}
+.hizmet-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--line)}
+.hizmet-kart{
+  background:var(--navy2);
+  padding:52px 44px;
+  position:relative;overflow:hidden;
+  transition:background 0.3s;
+}
+.hizmet-kart:hover{background:var(--navy3)}
+.hk-num{
+  font-family:'Playfair Display',serif;font-size:4rem;font-weight:900;
+  color:rgba(201,168,76,0.08);line-height:1;margin-bottom:32px;
+  transition:color 0.3s;
+}
+.hizmet-kart:hover .hk-num{color:rgba(201,168,76,0.15)}
+.hk-icon{font-size:1.8rem;margin-bottom:20px}
+.hizmet-kart h3{
+  font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;
+  margin-bottom:14px;line-height:1.2;
+}
+.hizmet-kart p{color:var(--slate);font-size:0.88rem;line-height:1.8;margin-bottom:28px;font-weight:300}
+.hk-list{list-style:none}
+.hk-list li{
+  font-size:0.82rem;color:var(--white);
+  padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.04);
+  display:flex;align-items:center;gap:10px;font-weight:300;
+}
+.hk-list li:last-child{border:none}
+.hk-list li::before{content:'—';color:var(--gold);font-size:0.7rem}
+.hk-bar{
+  position:absolute;bottom:0;left:0;right:0;height:2px;
+  background:var(--gold);transform:scaleX(0);transform-origin:left;
+  transition:transform 0.4s ease;
+}
+.hizmet-kart:hover .hk-bar{transform:scaleX(1)}
+
+/* ── NEDEN BİZ ── */
+.neden-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:center}
+.neden-items{display:flex;flex-direction:column;gap:0}
+.neden-item{
+  display:flex;gap:28px;padding:32px 0;
+  border-bottom:1px solid rgba(255,255,255,0.05);
+}
+.neden-item:first-child{border-top:1px solid rgba(255,255,255,0.05)}
+.ni-num{font-family:'Playfair Display',serif;font-size:1rem;color:var(--gold);font-weight:700;min-width:28px;padding-top:3px;}
+.ni-body h4{font-size:1rem;font-weight:700;margin-bottom:8px;letter-spacing:0.3px;color:#F7F4EE}
+.ni-body p{font-size:0.85rem;color:#B8CCDE;line-height:1.7;font-weight:400}
+
+.referans-kart{
+  background:var(--navy2);
+  border:1px solid var(--line);
+  padding:52px 44px;
+  position:relative;
+}
+.referans-kart::before{
+  content:'"';
+  font-family:'Playfair Display',serif;
+  font-size:8rem;color:var(--gold);opacity:0.12;
+  position:absolute;top:-10px;left:32px;line-height:1;
+}
+.stars{color:var(--gold);font-size:0.85rem;letter-spacing:2px;margin-bottom:24px}
+.ref-text{font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;line-height:1.6;color:#F7F4EE;margin-bottom:28px;font-style:italic;}
+.ref-author{font-size:0.78rem;color:#AABFD4;letter-spacing:1.5px;text-transform:uppercase;font-weight:600}
+.ref-divider{width:32px;height:1px;background:var(--gold);margin:16px 0}
+.sertifika-row{
+  display:flex;gap:16px;margin-top:40px;flex-wrap:wrap;
+}
+.sertifika{border:1px solid var(--line);padding:10px 18px;font-size:0.72rem;letter-spacing:2px;text-transform:uppercase;color:#C9A84C;font-weight:600;}
+
+/* ── BÖLGELER ── */
+.bolgeler{background:var(--navy2)}
+.bolgeler-inner{max-width:1200px;margin:0 auto}
+.bolge-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:60px;flex-wrap:wrap;gap:24px}
+.bolge-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--line)}
+.bolge-kart{
+  background:var(--navy2);padding:28px 32px;
+  display:flex;align-items:center;gap:14px;
+  transition:background 0.2s;
+}
+.bolge-kart:hover{background:var(--navy3)}
+.bk-dot{width:6px;height:6px;background:var(--gold);border-radius:50%;flex-shrink:0}
+.bk-name{font-size:0.88rem;font-weight:500;letter-spacing:0.5px}
+
+/* ── İLETİŞİM ── */
+.iletisim-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:start}
+.contact-list{display:flex;flex-direction:column;gap:2px;margin-top:40px;background:var(--line)}
+.contact-item{
+  background:var(--navy);
+  display:flex;align-items:center;gap:24px;
+  padding:28px 32px;
+  text-decoration:none;color:var(--white);
+  transition:background 0.2s;
+}
+.contact-item:hover{background:var(--navy2)}
+.ci-icon{
+  width:44px;height:44px;border:1px solid var(--line);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.1rem;flex-shrink:0;
+  transition:border-color 0.2s,background 0.2s;
+}
+.contact-item:hover .ci-icon{border-color:var(--gold);background:var(--gold-dim)}
+.ci-label{font-size:0.68rem;letter-spacing:2.5px;text-transform:uppercase;color:var(--slate);font-weight:500}
+.ci-value{font-size:0.95rem;font-weight:500;margin-top:3px}
+
+.form{display:flex;flex-direction:column;gap:2px;background:var(--line)}
+.form input,.form select,.form textarea{
+  background:var(--navy2);
+  border:none;outline:none;
+  color:var(--white);
+  padding:18px 24px;
+  font-family:'DM Sans',sans-serif;
+  font-size:0.9rem;font-weight:300;
+  transition:background 0.2s;
+  width:100%;
+}
+.form input:focus,.form select:focus,.form textarea:focus{background:var(--navy3)}
+.form input::placeholder,.form textarea::placeholder{color:var(--slate)}
+.form select{color:var(--slate);cursor:pointer}
+.form select option{background:var(--navy);color:var(--white)}
+.form textarea{min-height:120px;resize:vertical}
+.form-submit{
+  background:var(--gold);color:var(--navy);
+  border:none;padding:20px;
+  font-family:'DM Sans',sans-serif;
+  font-size:0.82rem;font-weight:600;
+  letter-spacing:2px;text-transform:uppercase;
+  cursor:pointer;transition:background 0.2s;
+}
+.form-submit:hover{background:var(--gold-light)}
+
+/* ── FOOTER ── */
+footer{
+  background:#060E1A;
+  padding:48px 60px;
+  border-top:1px solid var(--line);
+  display:grid;grid-template-columns:1fr auto 1fr;
+  align-items:center;gap:24px;
+}
+.f-logo{display:flex;align-items:center;gap:12px}
+.f-logo-mark{
+  width:36px;height:36px;border:1px solid var(--gold);
+  display:flex;align-items:center;justify-content:center;
+  font-family:'Playfair Display',serif;font-size:1rem;
+  color:var(--gold);
+}
+.f-logo-text{font-size:0.72rem;letter-spacing:3px;text-transform:uppercase;color:var(--slate);font-weight:500}
+footer p{font-size:0.75rem;color:var(--slate);text-align:center;letter-spacing:0.5px}
+.f-copy{font-size:0.72rem;color:rgba(143,163,184,0.5);text-align:right;letter-spacing:0.5px}
+
+/* ── WHATSAPP ── */
+.wa{
+  position:fixed;bottom:32px;right:32px;z-index:200;
+  width:54px;height:54px;border-radius:50%;
+  background:#25D366;display:flex;align-items:center;justify-content:center;
+  font-size:1.4rem;text-decoration:none;
+  box-shadow:0 4px 24px rgba(37,211,102,0.35);
+  transition:transform 0.2s,box-shadow 0.2s;
+}
+.wa:hover{transform:scale(1.08);box-shadow:0 8px 32px rgba(37,211,102,0.5)}
+
+/* ── ANIMATIONS ── */
+@keyframes rise{
+  from{opacity:0;transform:translateY(20px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+/* ── RESPONSIVE ── */
+/* ── Global overflow guard ── */
+html,body{max-width:100%;overflow-x:hidden}
+img,video,iframe,svg{max-width:100%;height:auto}
+*{word-break:break-word;-webkit-hyphens:auto;hyphens:auto}
+
+@media(max-width:900px){
+  nav{padding:14px 20px}
+  .nav-links{display:none}
+  section{padding:70px 20px}
+  .hero{padding:110px 20px 70px}
+  .hero-line{left:19px}
+  .hizmet-grid,.bolge-grid{grid-template-columns:1fr}
+  .neden-inner,.iletisim-inner{grid-template-columns:1fr;gap:48px}
+  .hero-stats{flex-direction:column}
+  .stat{border-right:none;border-bottom:1px solid var(--line)}
+  .stat:last-child{border-bottom:none}
+  footer{grid-template-columns:1fr;text-align:center;gap:16px}
+  .f-logo{justify-content:center}
+  .f-copy{text-align:center}
+  h1{font-size:clamp(2.4rem,11vw,4rem);letter-spacing:0}
+  h2{font-size:clamp(1.7rem,7vw,2.5rem)}
+  .hizmet-kart{padding:36px 28px}
+  .neden-inner > div:first-child{order:1}
+  .neden-inner > div:last-child{order:2}
+  .iletisim-inner > div:first-child{order:1}
+  .iletisim-inner > div:last-child{order:2}
+  .bolge-grid{grid-template-columns:1fr 1fr}
+  .hero-stats .stat{padding:18px 24px}
+  .cta-row{flex-direction:column;align-items:flex-start}
+  .btn-gold,.btn-ghost{width:100%;text-align:center;justify-content:center}
+  .h-header{flex-direction:column;align-items:flex-start;margin-bottom:40px}
+  .referans-kart{padding:40px 28px}
+  .contact-item{padding:20px 20px}
+  nav .nav-cta{padding:9px 16px;font-size:0.78rem}
+}
+
+@media(max-width:480px){
+  section{padding:60px 16px}
+  .hero{padding:100px 16px 60px}
+  .bolge-grid{grid-template-columns:1fr}
+  .sertifika-row{flex-direction:column}
+  .hero-stats{gap:0}
+  .form input,.form select,.form textarea{padding:14px 16px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav>
+  <div class="logo">
+    <div class="logo-mark">SM</div>
+    <div class="logo-text">
+      <strong>S&M Tesisat</strong>
+      Bursa
+    </div>
+  </div>
+  <div class="nav-links">
+    <a href="#hizmetler">Hizmetler</a>
+    <a href="#hakkimizda">Hakkımızda</a>
+    <a href="#bolgeler">Bölgeler</a>
+    <a href="#iletisim">İletişim</a>
+  </div>
+  <a href="tel:+905314212518" class="nav-cta">Hemen Ara</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-bg"></div>
+  <div class="noise"></div>
+  <div class="hero-line"></div>
+  <div class="hero-content">
+    <div class="eyebrow">
+      <div class="eyebrow-line"></div>
+      <span>Bursa'nın Güvenilir Tesisat Uzmanı</span>
+    </div>
+    <h1>
+      Doğalgaz, Klima<br>
+      ve Kombi'de<br>
+      <em>Uzman Ellerde.</em>
+    </h1>
+    <p class="hero-sub">
+      <strong>Sıddık & Mahmut Usta</strong> olarak Bursa'nın tüm ilçelerinde lisanslı, garantili ve dakik hizmet sunuyoruz. İşi ilk seferinde doğru yapıyoruz.
+    </p>
+    <div class="cta-row">
+      <a href="https://wa.me/905314212518?text=Merhaba%20S%26M%20Tesisat%2C%20%C3%BCcretsiz%20ke%C5%9Fif%20i%C3%A7in%20bilgi%20almak%20istiyorum." target="_blank" class="btn-gold">Ücretsiz Keşif İste</a>
+      <a href="#hizmetler" class="btn-ghost">Hizmetleri Gör</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-n">10+</div>
+        <div class="stat-l">Yıl Tecrübe</div>
+      </div>
+      <div class="stat">
+        <div class="stat-n">800+</div>
+        <div class="stat-l">Tamamlanan İş</div>
+      </div>
+      <div class="stat">
+        <div class="stat-n">12</div>
+        <div class="stat-l">Hizmet Bölgesi</div>
+      </div>
+      <div class="stat">
+        <div class="stat-n">%100</div>
+        <div class="stat-l">Garantili İşçilik</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- HİZMETLER -->
+<section class="hizmetler" id="hizmetler">
+  <div class="hizmetler-inner">
+    <div class="h-header">
+      <div>
+        <div class="tag">Uzmanlık Alanlarımız</div>
+        <h2>Sunduğumuz<br>Hizmetler</h2>
+      </div>
+      <p class="lead">Her iş için doğru ekipman, doğru teknik ve garantili işçilik. İlk görüşmeden iş teslimata kadar yanınızdayız.</p>
+    </div>
+    <div class="hizmet-grid">
+      <div class="hizmet-kart">
+        <div class="hk-num">01</div>
+        <div class="hk-icon">🔥</div>
+        <h3>Doğalgaz<br>Tesisat</h3>
+        <p>Yeni tesisat döşemesinden kaçak onarımına kadar tüm doğalgaz işleri. BOTAŞ standartlarında, sertifikalı uygulama.</p>
+        <ul class="hk-list">
+          <li>Yeni tesisat döşeme</li>
+          <li>Kaçak tespiti & onarım</li>
+          <li>Sayaç bağlantı işlemleri</li>
+          <li>Resmi sertifikasyon</li>
+        </ul>
+        <div class="hk-bar"></div>
+      </div>
+      <div class="hizmet-kart">
+        <div class="hk-num">02</div>
+        <div class="hk-icon">❄️</div>
+        <h3>Klima Montaj<br>& Bakım</h3>
+        <p>Her marka split klima montajı, yıllık bakım ve gaz dolumu. Verimli çalışan klima, düşük enerji faturası.</p>
+        <ul class="hk-list">
+          <li>Split klima montajı</li>
+          <li>Periyodik bakım & temizlik</li>
+          <li>Gaz dolumu (R32 / R410A)</li>
+          <li>Arıza tespiti & onarım</li>
+        </ul>
+        <div class="hk-bar"></div>
+      </div>
+      <div class="hizmet-kart">
+        <div class="hk-num">03</div>
+        <div class="hk-icon">🌡️</div>
+        <h3>Kombi<br>Montaj</h3>
+        <p>Kış gelmeden kombini hazır edin. Söküm, montaj, baca bağlantısı ve devreye alma tek ekipten.</p>
+        <ul class="hk-list">
+          <li>Her marka kombi montajı</li>
+          <li>Eski kombi söküm & atım</li>
+          <li>Baca & duman borusu bağlantısı</li>
+          <li>Devreye alma & ince ayar</li>
+        </ul>
+        <div class="hk-bar"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEDEN BİZ -->
+<section id="hakkimizda">
+  <div class="neden-inner">
+    <div>
+      <div class="tag">Neden S&M Tesisat?</div>
+      <h2>Farkımız<br>Detaylarda.</h2>
+      <p class="lead" style="margin-bottom:48px">Tavsiyeyle büyüyen bir firma olarak müşteri memnuniyeti her şeyin önünde gelir.</p>
+      <div class="neden-items">
+        <div class="neden-item">
+          <div class="ni-num">01</div>
+          <div class="ni-body">
+            <h4>Lisanslı & Sertifikalı Ustalar</h4>
+            <p>Sıddık ve Mahmut usta, doğalgaz tesisatı konusunda resmi sertifikaya sahip. Güvenli, standart uyumlu iş garantisi.</p>
+          </div>
+        </div>
+        <div class="neden-item">
+          <div class="ni-num">02</div>
+          <div class="ni-body">
+            <h4>Aynı Gün Servis İmkânı</h4>
+            <p>Acil durumlarda bekletmiyoruz. Randevu aldığınız günde yerinizde oluyoruz.</p>
+          </div>
+        </div>
+        <div class="neden-item">
+          <div class="ni-num">03</div>
+          <div class="ni-body">
+            <h4>Şeffaf Fiyatlandırma</h4>
+            <p>Keşif öncesi fiyatı netleştiriyoruz. Sonradan ek ücret çıkmaz, fatura sürprizi olmaz.</p>
+          </div>
+        </div>
+        <div class="neden-item">
+          <div class="ni-num">04</div>
+          <div class="ni-body">
+            <h4>İşçilik Garantisi</h4>
+            <p>Teslim ettiğimiz her işte işçilik garantisi veriyoruz. Sorun çıkarsa ücretsiz geri dönüyoruz.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="referans-kart">
+        <div class="stars">★★★★★</div>
+        <p class="ref-text">"Doğalgaz tesisatımızı çok hızlı ve temiz bir şekilde hallettiler. Fiyat önceden netleştirildi, sonradan hiçbir sürpriz çıkmadı. Kesinlikle tavsiye ederim."</p>
+        <div class="ref-divider"></div>
+        <div class="ref-author">Nilüfer, Bursa — Google Yorumu</div>
+      </div>
+      <div class="sertifika-row">
+        <div class="sertifika">✓ Doğalgaz Lisansı</div>
+        <div class="sertifika">✓ Garantili İşçilik</div>
+        <div class="sertifika">✓ Sigortalı Hizmet</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BÖLGELER -->
+<section class="bolgeler" id="bolgeler">
+  <div class="bolgeler-inner">
+    <div class="bolge-header">
+      <div>
+        <div class="tag">Hizmet Alanı</div>
+        <h2>Bursa'nın Her<br>İlçesindeyiz.</h2>
+      </div>
+      <p class="lead">Ulaşamayacağımız bir ilçe yok. Randevu alın, adresinize gelelim.</p>
+    </div>
+    <div class="bolge-grid">
+      <div class="bolge-kart"><div class="bk-dot"></div><div class="bk-name">Nilüfer</div></div>
+      <div class="bolge-kart"><div class="bk-dot"></div><div class="bk-name">Osmangazi</div></div>
+      <div class="bolge-kart"><div class="bk-dot"></div><div class="bk-name">Yıldırım</div></div>
+      <div class="bolge-kart"><div class="bk-dot"></div><div class="bk-name">Mudanya</div></div>
+      <div class="bolge-kart"><div class="bk-dot"></div><div class="bk-name">Gemlik</div></div>
+      <div class="bolge-kart"><div class="bk-dot"></div><div class="bk-name">Kestel</div></div>
+      <div class="bolge-kart"><div class="bk-dot"></div><div class="bk-name">Görükle</div></div>
+      <div class="bolge-kart"><div class="bk-dot"></div><div class="bk-name">İnegöl</div></div>
+      <div class="bolge-kart"><div class="bk-dot"></div><div class="bk-name">Karacabey</div></div>
+      <div class="bolge-kart"><div class="bk-dot"></div><div class="bk-name">Gürsu</div></div>
+      <div class="bolge-kart"><div class="bk-dot"></div><div class="bk-name">Mustafakemalpaşa</div></div>
+      <div class="bolge-kart"><div class="bk-dot"></div><div class="bk-name">ve tüm Bursa</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- İLETİŞİM -->
+<section id="iletisim">
+  <div class="iletisim-inner">
+    <div>
+      <div class="tag">İletişime Geçin</div>
+      <h2>Teklif Almak<br>Çok Kolay.</h2>
+      <p class="lead" style="margin-bottom:0">Bizi arayın ya da formu doldurun — 24 saat içinde size dönelim.</p>
+      <div class="contact-list">
+        <a href="tel:+905314212518" class="contact-item">
+          <div class="ci-icon">📞</div>
+          <div>
+            <div class="ci-label">Telefon</div>
+            <div class="ci-value">0531 421 25 18</div>
+          </div>
+        </a>
+        <a href="https://wa.me/905314212518" target="_blank" class="contact-item">
+          <div class="ci-icon">💬</div>
+          <div>
+            <div class="ci-label">WhatsApp</div>
+            <div class="ci-value">Mesaj Gönderin</div>
+          </div>
+        </a>
+        <div class="contact-item">
+          <div class="ci-icon">🕐</div>
+          <div>
+            <div class="ci-label">Çalışma Saatleri</div>
+            <div class="ci-value">Hafta içi & Cumartesi 08:00–20:00</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="ci-icon">📍</div>
+          <div>
+            <div class="ci-label">Hizmet Bölgesi</div>
+            <div class="ci-value">Bursa — Tüm İlçeler</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="form">
+        <input type="text" placeholder="Ad Soyad">
+        <input type="tel" placeholder="Telefon Numarası">
+        <select>
+          <option value="" disabled selected>Hizmet Seçin</option>
+          <option>Doğalgaz Tesisat</option>
+          <option>Klima Montajı</option>
+          <option>Klima Bakımı</option>
+          <option>Kombi Montajı</option>
+          <option>Diğer</option>
+        </select>
+        <textarea placeholder="Kısaca durumu anlatın..."></textarea>
+        <button class="form-submit" onclick="sendWhatsApp()">WhatsApp ile Teklif Al →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="f-logo">
+    <div class="f-logo-mark">SM</div>
+    <div class="f-logo-text">S&M Tesisat — Bursa</div>
+  </div>
+  <p>Doğalgaz · Klima · Kombi</p>
+  <div class="f-copy">© 2024 S&M Tesisat. Tüm hakları saklıdır.</div>
+</footer>
+
+<!-- WhatsApp -->
+<a class="wa" href="https://wa.me/905314212518" target="_blank" title="WhatsApp">💬</a>
+
+
+<script>
+function sendWhatsApp() {
+  const ad = document.querySelector('.form input[type="text"]').value.trim();
+  const tel = document.querySelector('.form input[type="tel"]').value.trim();
+  const hizmet = document.querySelector('.form select').value;
+  const not = document.querySelector('.form textarea').value.trim();
+
+  if (!ad || !tel) {
+    alert('Lütfen ad ve telefon numaranızı girin.');
+    return;
+  }
+
+  let msg = `Merhaba Sıddık Usta, teklif almak istiyorum.%0A%0A`;
+  msg += `👤 Ad: ${encodeURIComponent(ad)}%0A`;
+  msg += `📞 Tel: ${encodeURIComponent(tel)}%0A`;
+  if (hizmet) msg += `🔧 Hizmet: ${encodeURIComponent(hizmet)}%0A`;
+  if (not) msg += `📝 Not: ${encodeURIComponent(not)}%0A`;
+
+  window.open(`https://wa.me/905314212518?text=${msg}`, '_blank');
+}
+</script>
+
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js')
+      .then(r => console.log('SW registered:', r.scope))
+      .catch(e => console.log('SW error:', e));
+  });
+}
+</script>
+</body>
+</html>
